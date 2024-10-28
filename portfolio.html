@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Portfolio</title> <!-- // Sets the title of the webpage -->
+    <link rel="stylesheet" href="portfolioCss.css"> <!-- // Links to the external CSS file for styling -->
+</head>
+<body>
+    <div class = "background"></div> <!-- // Adds a background to the webpage -->
+
+    <nav class="navbar"> <!-- // Navigation bar section -->
+        <div class="logo">Team Wong</div> <!-- // Logo or brand name of the website -->
+        <div class="nav-links"> <!-- // Container for navigation links -->
+            <a href="homepage.html">HOME</a> <!-- // Link to the homepage -->
+            <a href="portfolio.html">PORTFOLIO</a> <!-- // Link to the portfolio page -->
+            <a href="aboutme.html">ABOUT US</a> <!-- // Link to the about us page -->
+            <a href="contact.html">CONTACT</a> <!-- // Link to the contact page -->
+            <a href="blog.html">BLOG</a> <!-- // Link to the blog page -->
+        </div>
+    </nav>
+
+    <div class="container"> <!-- // Main container for the content -->
+        <section class="blog-section section"> <!-- // Section for the blog title header -->
+            <header class = "header2">
+                <h2>Our Portfolio</h2> <!-- // Header text for the portfolio section -->
+            </header>
+        </section>
+        <p style="text-align: center;">Click on the image to view more details</p> <!-- // Instruction text for users -->
+    </div>
+    <div class="gallery"> <!-- // Image gallery section -->
+        <img src="images2/portfolio/rpggame.png" alt="maze" onclick="openModal(0)"> <!-- // RPG Game image with onclick event to open modal -->
+        <img src="images2/portfolio/maze.png" alt="rpggame" onclick="openModal(1)"> <!-- // Maze Game image with onclick event to open modal -->
+        <img src="images2/portfolio/pushtrain.png" alt="pushtrain" onclick="openModal(2)"> <!-- // Push Train image with onclick event to open modal -->
+        <img src="images2/portfolio/boss.png" alt="boss" onclick="openModal(3)"> <!-- // Boss Fight Game image with onclick event to open modal -->
+    </div>
+
+    <div id="myModal" class="modal"> <!-- // Modal popup for viewing more details -->
+        <div class="modal-content"> <!-- // Container for modal content -->
+            <span class="close" onclick="closeModal()">&times;</span> <!-- // Close button for modal -->
+            <h2 id="modalTitle"></h2> <!-- // Placeholder for modal title -->
+            <div class="carousel"> <!-- // Carousel container for images or videos -->
+                <button class="prev" onclick="prevItem()">&larr;</button> <!-- // Previous button to navigate carousel items -->
+                <div class="carousel-item"> <!-- // Container for the current carousel item -->
+                    <iframe id="modalVideo" src="" frameborder="0" allowfullscreen style="display:none;"></iframe> <!-- // Video iframe (hidden by default) -->
+                    <img id="modalImage" src="" alt="Images"> <!-- // Placeholder image in modal -->
+                </div>
+                <button class="next" onclick="nextItem()">&rarr;</button> <!-- // Next button to navigate carousel items -->
+            </div>
+            <p id="modalDescription"></p> <!-- // Placeholder for modal description -->
+        </div>
+    </div>
+
+    <script src="portfolioJs.js"></script> <!-- // Links to the external JavaScript file for interactivity -->
+</body>
+</html>
